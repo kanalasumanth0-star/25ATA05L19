@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us - Sumanth Travels & Tours</title>
+
+    <style>
+        /* ===== GENERAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f1f8ff;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #0066cc, #00a6a6);
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .logo p {
+            font-size: 14px;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: white;
+            color: #0066cc;
+        }
+
+        /* ===== PAGE TITLE ===== */
+        .page-title {
+            background: linear-gradient(135deg, #00a6a6, #0077b6);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .page-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            font-size: 18px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 50px 8%;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 35px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTACT INFORMATION ===== */
+        .contact-info {
+            background-color: #e0f7fa;
+            padding: 30px;
+            border-radius: 15px;
+            width: 45%;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #0077b6;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 18px 0;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .contact-item {
+            background-color: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 45%;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            color: #0077b6;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border: 2px solid #00a6a6;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        /* ===== BUTTON ===== */
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #0066cc, #00a6a6);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #004c99;
+            transform: scale(1.02);
+        }
+
+        /* ===== MAP / LOCATION ===== */
+        .location {
+            background-color: #dff3e3;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .location h2 {
+            color: #198754;
+            margin-bottom: 10px;
+        }
+
+        .location p {
+            font-size: 17px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #12344d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+
+            header {
+                padding: 20px;
+                text-align: center;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <h1>Sumanth Travels & Tours</h1>
+            <p>Your Journey, Our Responsibility</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="packages.html">Tour Packages</a>
+                </li>
+
+                <li>
+                    <a href="booking.html">Booking</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="page-title">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            We are happy to help you plan your next journey!
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <div class="contact-item">
+                    <p>
+                        📞 <strong>Phone:</strong><br>
+                        +91 XXXXX XXXXX
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <p>
+                        📧 <strong>Email:</strong><br>
+                        sumanthtravelsandtours@example.com
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <p>
+                        📍 <strong>Location:</strong><br>
+                        Andhra Pradesh, India
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <p>
+                        🕐 <strong>Working Hours:</strong><br>
+                        Monday - Saturday<br>
+                        9:00 AM - 7:00 PM
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h3>Send Us a Message</h3>
+
+                <form id="contactForm">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOCATION ================= -->
+
+    <section class="location">
+
+        <h2>📍 Visit Us</h2>
+
+        <p>
+            Sumanth Travels & Tours<br>
+            Andhra Pradesh, India
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Sumanth Travels & Tours</h3>
+
+        <p>Your Journey, Our Responsibility</p>
+
+        <p>📞 +91 XXXXX XXXXX</p>
+
+        <p>📧 sumanthtravelsandtours@example.com</p>
+
+        <hr>
+
+        <p>
+            © 2026 Sumanth Travels & Tours.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert("Thank you! Your message has been submitted successfully.");
+
+            document.getElementById("contactForm").reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```

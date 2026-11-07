@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Sumanth Travels & Tours</title>
+
+    <style>
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #004369;
+            color: white;
+            padding: 20px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .logo p {
+            font-size: 14px;
+            color: #d7fff8;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffb300;
+            color: #222;
+        }
+
+        /* Current Page */
+
+        nav ul li a.active {
+            background-color: #ffb300;
+            color: #222;
+        }
+
+
+        /* ================= PAGE BANNER ================= */
+
+        .page-banner {
+            background: linear-gradient(
+                rgba(0, 86, 105, 0.85),
+                rgba(0, 55, 77, 0.85)
+            ),
+            url("images/ooty.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            height: 350px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .page-banner h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .page-banner p {
+            font-size: 20px;
+        }
+
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-section {
+            background-color: white;
+
+            padding: 60px 10%;
+
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #004669;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            max-width: 900px;
+            margin: 0 auto 15px;
+
+            font-size: 17px;
+            color: #555;
+        }
+
+
+        /* ================= MISSION & VISION ================= */
+
+        .mission-section {
+            background-color: #e0f2f1;
+
+            padding: 60px 10%;
+        }
+
+        .mission-container {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .mission-card {
+            background-color: white;
+
+            width: 320px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .mission-card h3 {
+            color: #003d69;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .mission-card p {
+            color: #555;
+        }
+
+
+        /* ================= WHY CHOOSE US ================= */
+
+        .why-section {
+            background-color: #fff8e1;
+
+            padding: 60px 10%;
+
+            text-align: center;
+        }
+
+        .why-section h2 {
+            color: #e65100;
+
+            font-size: 32px;
+
+            margin-bottom: 30px;
+        }
+
+        .why-container {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .why-card {
+            background-color: white;
+
+            width: 230px;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-card h3 {
+            color: #003869;
+
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: #666;
+        }
+
+
+        /* ================= CALL TO ACTION ================= */
+
+        .cta {
+            background-color: #005f79;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 20px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            background-color: #ffb300;
+
+            color: #222;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            border-radius: 5px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ffffff;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #263238;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            color: #ffb300;
+
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #ddd;
+        }
+
+        footer hr {
+            margin: 20px auto;
+
+            width: 80%;
+
+            border: 0;
+
+            border-top: 1px solid #555;
+        }
+
+
+        /* ================= MOBILE RESPONSIVE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 20px;
+
+                padding: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+
+                gap: 5px;
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: block;
+            }
+
+            .page-banner {
+                height: 280px;
+            }
+
+            .page-banner h2 {
+                font-size: 36px;
+            }
+
+            .page-banner p {
+                font-size: 16px;
+            }
+
+            .about-section {
+                padding: 40px 20px;
+            }
+
+            .mission-section {
+                padding: 40px 20px;
+            }
+
+            .why-section {
+                padding: 40px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>Sumanth Travels & Tours</h1>
+
+            <p>Your Journey, Our Responsibility</p>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="active">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="packages.html">
+                        Tour Packages
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= PAGE BANNER ================= -->
+
+    <section class="page-banner">
+
+        <div>
+
+            <h2>About Us</h2>
+
+            <p>
+                Discover India with Sumanth Travels & Tours
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT US ================= -->
+
+    <section class="about-section">
+
+        <h2>Welcome to Sumanth Travels & Tours</h2>
+
+        <p>
+            Sumanth Travels & Tours is a travel and tourism service
+            website designed to help customers explore beautiful
+            destinations across India.
+        </p>
+
+        <p>
+            We provide comfortable travel, affordable tour packages,
+            hotel booking assistance and customized travel plans
+            for individuals, families and groups.
+        </p>
+
+        <p>
+            Our goal is to make every journey comfortable, safe,
+            enjoyable and memorable for our customers.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= MISSION AND VISION ================= -->
+
+    <section class="mission-section">
+
+        <div class="mission-container">
+
+
+            <!-- Mission -->
+
+            <div class="mission-card">
+
+                <h3>🎯 Our Mission</h3>
+
+                <p>
+                    To provide affordable, comfortable and reliable
+                    travel services while creating memorable experiences
+                    for every customer.
+                </p>
+
+            </div>
+
+
+            <!-- Vision -->
+
+            <div class="mission-card">
+
+                <h3>🌍 Our Vision</h3>
+
+                <p>
+                    To become a trusted travel partner and make
+                    exploring beautiful destinations easier and
+                    more enjoyable for everyone.
+                </p>
+
+            </div>
+
+
+            <!-- Values -->
+
+            <div class="mission-card">
+
+                <h3>❤️ Our Values</h3>
+
+                <p>
+                    Customer satisfaction, safety, honesty,
+                    quality service and responsible tourism
+                    are our core values.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why-section">
+
+        <h2>Why Choose Us?</h2>
+
+
+        <div class="why-container">
+
+
+            <div class="why-card">
+
+                <h3>💰 Affordable</h3>
+
+                <p>
+                    Budget-friendly tour packages for
+                    different types of travelers.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>🚌 Comfortable</h3>
+
+                <p>
+                    Comfortable transportation and
+                    travel arrangements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>🗺️ Best Destinations</h3>
+
+                <p>
+                    Explore popular and beautiful
+                    destinations across India.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>📞 Support</h3>
+
+                <p>
+                    Friendly customer support to help
+                    you plan your journey.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="cta">
+
+        <h2>Start Your Journey Today!</h2>
+
+        <p>
+            Explore beautiful destinations with
+            Sumanth Travels & Tours.
+        </p>
+
+        <a href="booking.html" class="cta-button">
+            Book Your Trip
+        </a>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Sumanth Travels & Tours</h3>
+
+        <p>
+            Your Journey, Our Responsibility
+        </p>
+
+        <p>
+            📞 Phone: +91 XXXXX XXXXX
+        </p>
+
+        <p>
+            📧 Email: sumanthtravels@example.com
+        </p>
+
+        <p>
+            📍 Andhra Pradesh, India
+        </p>
+
+        <hr>
+
+        <p>
+            © 2026 Sumanth Travels & Tours.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```

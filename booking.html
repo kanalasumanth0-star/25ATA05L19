@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking | Sumanth Travels & Tours</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+            color: #333;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+            background: linear-gradient(90deg, #003369, #004789);
+            color: white;
+            padding: 20px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .logo p {
+            font-size: 14px;
+            color: #d7fff8;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+
+            padding: 10px 15px;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ffb300;
+            color: #222;
+        }
+
+        nav ul li a.active {
+            background-color: #ffb300;
+            color: #222;
+        }
+
+
+        /* ================= BOOKING SECTION ================= */
+
+        .booking-section {
+            min-height: 750px;
+
+            padding: 50px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* ================= BOOKING CONTAINER ================= */
+
+        .booking-container {
+            width: 100%;
+            max-width: 850px;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .booking-container h2 {
+            text-align: center;
+
+            color: #280069;
+
+            font-size: 32px;
+
+            margin-bottom: 10px;
+        }
+
+        .booking-container .subtitle {
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .booking-form {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .form-group {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .form-group.full-width {
+            grid-column: 1 / 3;
+        }
+
+
+        .form-group label {
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #003f69;
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 7px;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: 0.3s;
+
+            background-color: #f9ffff;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color: #005289;
+
+            box-shadow: 0 0 5px rgba(0, 137, 123, 0.3);
+        }
+
+
+        .form-group textarea {
+            resize: vertical;
+
+            min-height: 100px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .submit-btn {
+
+            grid-column: 1 / 3;
+
+            border: none;
+
+            background: linear-gradient(90deg, #ff9800, #ffb300);
+
+            color: white;
+
+            padding: 15px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .submit-btn:hover {
+
+            background: linear-gradient(90deg, #f57c00, #ff9800);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= INFORMATION BOX ================= */
+
+        .booking-info {
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: linear-gradient(135deg, #e0f2f1, #fff8e1);
+
+            border-left: 5px solid #003789;
+
+            border-radius: 7px;
+        }
+
+
+        .booking-info h3 {
+
+            color: #00695c;
+
+            margin-bottom: 10px;
+        }
+
+
+        .booking-info p {
+
+            margin-bottom: 7px;
+
+            color: #555;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background-color: #00364d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            line-height: 1.8;
+        }
+
+
+        footer h3 {
+
+            color: #ffb300;
+
+            font-size: 22px;
+
+            margin-bottom: 5px;
+        }
+
+
+        footer hr {
+
+            border: none;
+
+            border-top: 1px solid #80b5cb;
+
+            margin: 15px auto;
+
+            max-width: 700px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 20px;
+
+                padding: 20px;
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px;
+            }
+
+
+            .booking-container {
+
+                padding: 25px 20px;
+            }
+
+
+            .booking-form {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .form-group.full-width {
+
+                grid-column: 1;
+            }
+
+
+            .submit-btn {
+
+                grid-column: 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>Sumanth Travels & Tours</h1>
+
+            <p>Your Journey, Our Responsibility</p>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="packages.html">Tour Packages</a>
+                </li>
+
+                <li>
+                    <a href="booking.html" class="active">Booking</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= BOOKING SECTION ================= -->
+
+    <section class="booking-section">
+
+        <div class="booking-container">
+
+
+            <h2>Book Your Trip</h2>
+
+            <p class="subtitle">
+                Fill in the details below and start your memorable journey with us.
+            </p>
+
+
+            <!-- Booking Form -->
+
+            <form class="booking-form" id="bookingForm">
+
+
+                <!-- Full Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Destination -->
+
+                <div class="form-group">
+
+                    <label for="destination">
+                        Destination
+                    </label>
+
+                    <select
+                        id="destination"
+                        name="destination"
+                        required
+                    >
+
+                        <option value="">
+                            Select Destination
+                        </option>
+
+                        <option value="Ooty">
+                            Ooty
+                        </option>
+
+                        <option value="Goa">
+                            Goa
+                        </option>
+
+                        <option value="Tirupati">
+                            Tirupati
+                        </option>
+
+                        <option value="Kerala">
+                            Kerala
+                        </option>
+
+                        <option value="Hyderabad">
+                            Hyderabad
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Travel Date -->
+
+                <div class="form-group">
+
+                    <label for="travelDate">
+                        Travel Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="travelDate"
+                        name="travelDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Number of Persons -->
+
+                <div class="form-group">
+
+                    <label for="persons">
+                        Number of Persons
+                    </label>
+
+                    <input
+                        type="number"
+                        id="persons"
+                        name="persons"
+                        placeholder="Number of travelers"
+                        min="1"
+                        max="50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Package -->
+
+                <div class="form-group full-width">
+
+                    <label for="package">
+                        Select Tour Package
+                    </label>
+
+                    <select
+                        id="package"
+                        name="package"
+                        required
+                    >
+
+                        <option value="">
+                            Select Package
+                        </option>
+
+                        <option value="Ooty Package">
+                            Ooty - 3 Days / 2 Nights
+                        </option>
+
+                        <option value="Goa Package">
+                            Goa - 3 Days / 2 Nights
+                        </option>
+
+                        <option value="Tirupati Package">
+                            Tirupati - 2 Days / 1 Night
+                        </option>
+
+                        <option value="Kerala Package">
+                            Kerala - 5 Days / 4 Nights
+                        </option>
+
+                        <option value="Hyderabad Package">
+                            Hyderabad - 2 Days / 1 Night
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Message -->
+
+                <div class="form-group full-width">
+
+                    <label for="message">
+                        Special Requirements
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Enter any special requirements..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Submit Button -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    ✈️ Confirm Booking
+                </button>
+
+
+            </form>
+
+
+            <!-- Booking Information -->
+
+            <div class="booking-info">
+
+                <h3>📌 Booking Information</h3>
+
+                <p>
+                    ✓ Please provide correct contact details.
+                </p>
+
+                <p>
+                    ✓ Our team will contact you to confirm your booking.
+                </p>
+
+                <p>
+                    ✓ Package prices may vary depending on travel dates.
+                </p>
+
+                <p>
+                    ✓ Thank you for choosing Sumanth Travels & Tours!
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>Sumanth Travels & Tours</h3>
+
+        <p>
+            Your Journey, Our Responsibility
+        </p>
+
+        <p>
+            📞 Phone: +91 XXXXX XXXXX
+        </p>
+
+        <p>
+            📧 Email: sumanthtravels@example.com
+        </p>
+
+        <p>
+            📍 Andhra Pradesh, India
+        </p>
+
+        <hr>
+
+        <p>
+            © 2026 Sumanth Travels & Tours.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "🎉 Booking submitted successfully!\n\n" +
+                    "Thank you for choosing Sumanth Travels & Tours."
+                );
+
+                this.reset();
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
+```

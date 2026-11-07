@@ -1,0 +1,357 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Tour Packages - Sumanth Travels & Tours</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f9;
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        background-color: #0066cc;
+        color: white;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 26px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Page Heading */
+    .page-title {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #e6f2ff;
+    }
+
+    .page-title h2 {
+        color: #0066cc;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .page-title p {
+        font-size: 18px;
+    }
+
+    /* Packages */
+    .packages {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 40px 8%;
+    }
+
+    .package-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transition: transform 0.3s;
+    }
+
+    .package-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .package-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .package-content {
+        padding: 20px;
+    }
+
+    .package-content h3 {
+        color: #0066cc;
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .package-content p {
+        line-height: 1.6;
+    }
+
+    .price {
+        font-size: 21px;
+        font-weight: bold;
+        color: #e67e22;
+    }
+
+    .duration {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .features {
+        padding-left: 20px;
+        line-height: 1.8;
+    }
+
+    .book-btn {
+        display: inline-block;
+        background-color: #0066cc;
+        color: white;
+        text-decoration: none;
+        padding: 11px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .book-btn:hover {
+        background-color: #004c99;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+        header {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .page-title h2 {
+            font-size: 26px;
+        }
+    }
+</style>
+</head> 
+<body>
+<!-- Header -->
+<header>
+    <h1>Sumanth Travels & Tours</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="packages.html">Packages</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Page Title -->
+<section class="page-title">
+    <h2>Our Tour Packages</h2>
+    <p>Explore beautiful destinations with Sumanth Travels & Tours</p>
+</section>
+
+
+<!-- Tour Packages -->
+<section class="packages">
+
+    <!-- Goa Package -->
+    <div class="package-card">
+
+        <img src="goa.png" alt="Goa Beach">
+
+        <div class="package-content">
+            <h3>Goa Tour</h3>
+
+            <p class="duration">
+                Duration: 3 Days / 2 Nights
+            </p>
+
+            <p>
+                Enjoy the beautiful beaches, nightlife and
+                exciting attractions of Goa.
+            </p>
+
+            <ul class="features">
+                <li>Hotel Accommodation</li>
+                <li>Local Sightseeing</li>
+                <li>Transportation</li>
+                <li>Tour Guide</li>
+            </ul>
+
+            <p class="price">Starting from ₹7,999</p>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Tirupati Package -->
+    <div class="package-card">
+
+        <img src="tirupati.png" alt="Tirupati Temple">
+
+        <div class="package-content">
+            <h3>Tirupati Tour</h3>
+
+            <p class="duration">
+                Duration: 2 Days / 1 Night
+            </p>
+
+            <p>
+                Visit the famous Tirumala temple and
+                explore the spiritual attractions of Tirupati.
+            </p>
+
+            <ul class="features">
+                <li>Hotel Accommodation</li>
+                <li>Temple Visit</li>
+                <li>Transportation</li>
+                <li>Local Sightseeing</li>
+            </ul>
+
+            <p class="price">Starting from ₹4,999</p>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Kerala Package -->
+    <div class="package-card">
+
+        <img src="kerala.png" alt="Kerala Backwaters">
+
+        <div class="package-content">
+            <h3>Kerala Tour</h3>
+
+            <p class="duration">
+                Duration: 5 Days / 4 Nights
+            </p>
+
+            <p>
+                Experience the beauty of Kerala with
+                beaches, backwaters, hills and greenery.
+            </p>
+
+            <ul class="features">
+                <li>Hotel Accommodation</li>
+                <li>Backwater Experience</li>
+                <li>Transportation</li>
+                <li>Local Sightseeing</li>
+            </ul>
+
+            <p class="price">Starting from ₹12,999</p>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Hyderabad Package -->
+    <div class="package-card">
+
+        <img src="hyderabad.png" alt="Hyderabad City">
+
+        <div class="package-content">
+            <h3>Hyderabad Tour</h3>
+
+            <p class="duration">
+                Duration: 2 Days / 1 Night
+            </p>
+
+            <p>
+                Discover the history, culture and famous
+                attractions of Hyderabad.
+            </p>
+
+            <ul class="features">
+                <li>Hotel Accommodation</li>
+                <li>City Sightseeing</li>
+                <li>Transportation</li>
+                <li>Tour Guide</li>
+            </ul>
+
+            <p class="price">Starting from ₹3,999</p>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Ooty Package -->
+    <div class="package-card">
+
+        <img src="ooty.png" alt="Ooty Hills">
+
+        <div class="package-content">
+            <h3>Ooty Tour</h3>
+
+            <p class="duration">
+                Duration: 3 Days / 2 Nights
+            </p>
+
+            <p>
+                Enjoy the pleasant weather, beautiful hills,
+                lakes and gardens of Ooty.
+            </p>
+
+            <ul class="features">
+                <li>Hotel Accommodation</li>
+                <li>Hill Station Sightseeing</li>
+                <li>Transportation</li>
+                <li>Tour Guide</li>
+            </ul>
+
+            <p class="price">Starting from ₹6,999</p>
+
+            <a href="booking.html" class="book-btn">
+                Book Now
+            </a>
+        </div>
+    </div>
+
+
+       </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Sumanth Travels & Tours. All Rights Reserved.</p>
+    <p>Explore • Travel • Enjoy</p>
+</footer>
+</body> 
+</html>

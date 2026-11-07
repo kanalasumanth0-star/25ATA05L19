@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sumanth Travels & Tours</title>
+
+    <style>
+        /* =========================
+           BASIC RESET
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url('profile.png');
+            background-size:center;
+            height: 2px;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .top-bar {
+            background: #071952;
+            color: white;
+            padding: 10px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .top-bar span {
+            margin-right: 20px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            background: white;
+            padding: 15px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00a8cc, #5b21b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+        }
+
+        .logo h1 {
+            color: #14213d;
+            font-size: 24px;
+        }
+
+        .logo p {
+            color: #00a8a8;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #172554;
+            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #5b21b6;
+            color: white;
+        }
+
+
+        /* =========================
+           HERO SECTION
+           YOUR PHOTO IS THE BACKGROUND
+        ========================== */
+
+        .hero {
+            min-height: 450px;
+
+            background-image:
+                linear-gradient(
+                    rgba(4, 18, 60, 0.72),
+                    rgba(0, 121, 140, 0.60)
+                ),
+                url("images/sumanth.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-content .welcome {
+            color: #ffd60a;
+            font-size: 25px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 65px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 8px #000;
+        }
+
+        .hero-content h3 {
+            color: #ffd60a;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 28px;
+            margin: 8px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #6d28d9;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4c1d95;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: #ffd60a;
+            color: #172554;
+        }
+
+        .btn-secondary:hover {
+            background: #ffb703;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        .about {
+            padding: 70px 8%;
+            background: linear-gradient(
+                135deg,
+                #eef2ff,
+                #ecfeff
+            );
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text .small-title {
+            color: #6d28d9;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            margin: 10px 0 20px;
+            color: #172554;
+        }
+
+        .about-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+
+        .about-boxes {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .about-card h3 {
+            color: #172554;
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================
+           DESTINATIONS
+        ========================== */
+
+        .destinations {
+            padding: 70px 6%;
+            background: #e0f2fe;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #6d28d9;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .destinations h2 {
+            font-size: 38px;
+            margin: 10px 0 40px;
+            color: #172554;
+        }
+
+        .destination-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 20px;
+        }
+
+        .destination-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .destination-card .place-image {
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            background: linear-gradient(
+                135deg,
+                #38bdf8,
+                #0f766e
+            );
+        }
+
+        .destination-card h3 {
+            color: #5b21b6;
+            font-size: 22px;
+            margin: 18px 10px 8px;
+        }
+
+        .destination-card p {
+            padding: 0 15px 20px;
+            line-height: 1.5;
+            color: #64748b;
+        }
+
+        .destination-card a {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #0891b2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            padding: 70px 7%;
+            background: #fff7ed;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 38px;
+            margin: 10px 0 40px;
+        }
+
+        .service-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 30px 20px;
+            border-radius: 18px;
+            background: linear-gradient(
+                135deg,
+                #6d28d9,
+                #2563eb
+            );
+            color: white;
+        }
+
+        .service-card:nth-child(2) {
+            background: linear-gradient(
+                135deg,
+                #0891b2,
+                #0f766e
+            );
+        }
+
+        .service-card:nth-child(3) {
+            background: linear-gradient(
+                135deg,
+                #f59e0b,
+                #ea580c
+            );
+        }
+
+        .service-card:nth-child(4) {
+            background: linear-gradient(
+                135deg,
+                #16a34a,
+                #15803d
+            );
+        }
+
+        .service-card .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CALL TO ACTION
+        ========================== */
+
+        .cta {
+            padding: 55px 20px;
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0891b2,
+                    #2563eb,
+                    #6d28d9
+                );
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #071952;
+            color: white;
+            padding: 45px 7% 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                2fr 1fr 1fr 1.5fr;
+
+            gap: 40px;
+        }
+
+        footer h3 {
+            color: #22d3ee;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            line-height: 1.7;
+            color: #dbeafe;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin: 10px 0;
+        }
+
+        footer ul li a {
+            color: #dbeafe;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: #22d3ee;
+        }
+
+        .copyright {
+            border-top: 1px solid #334155;
+            margin-top: 35px;
+            padding-top: 20px;
+            text-align: center;
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .destination-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .service-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .footer-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .top-bar {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content h2 {
+                font-size: 42px;
+            }
+
+            .hero-content h3 {
+                font-size: 30px;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+
+            .about-boxes {
+                width: 100%;
+            }
+
+            .destination-container {
+                grid-template-columns: 1fr;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= TOP CONTACT BAR ================= -->
+
+    <div class="top-bar">
+
+        <div>
+            <span>📞 +91 98765 43210</span>
+            <span>📧 sumanthtravels@example.com</span>
+        </div>
+
+        <div>
+            <span>📍 Andhra Pradesh, India</span>
+        </div>
+
+    </div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✈️
+            </div>
+
+            <div>
+                <h1>Sumanth</h1>
+                <p>Travels & Tours</p>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="packages.html">
+                        Packages
+                    </a>
+                </li>
+
+                <li>
+                    <a href="booking.html">
+                        Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="welcome">
+                Welcome to
+            </div>
+
+            <h2>
+                Sumanth
+            </h2>
+
+            <h3>
+                Travels & Tours
+            </h3>
+
+            <p>
+                Explore the world with comfort,
+                joy and memorable journeys.
+            </p>
+
+
+            <a href="packages.html"
+               class="btn btn-primary">
+
+                ✈️ Explore Packages
+
+            </a>
+
+
+            <a href="booking.html"
+               class="btn btn-secondary">
+
+                📅 Book Your Trip
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about">
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <div class="small-title">
+                    ABOUT US
+                </div>
+
+                <h2>
+                    Your Journey,
+                    Our Responsibility
+                </h2>
+
+                <p>
+                    Sumanth Travels & Tours is your trusted
+                    travel partner. We provide comfortable,
+                    affordable and memorable travel experiences
+                    to beautiful destinations.
+                </p>
+
+                <br>
+
+                <p>
+                    Whether you are planning a family vacation,
+                    a spiritual journey or an exciting adventure,
+                    we are here to make your journey special.
+                </p>
+
+                <br>
+
+                <a href="about.html"
+                   class="btn btn-primary">
+
+                    Read More
+
+                </a>
+
+            </div>
+
+
+            <div class="about-boxes">
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        👨‍👩‍👧‍👦
+                    </div>
+
+                    <h3>
+                        Happy Customers
+                    </h3>
+
+                    <p>
+                        1000+
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Safe Travel
+                    </h3>
+
+                    <p>
+                        Comfortable
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        🏷️
+                    </div>
+
+                    <h3>
+                        Best Price
+                    </h3>
+
+                    <p>
+                        Affordable
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="icon">
+                        🎧
+                    </div>
+
+                    <h3>
+                        Travel Support
+                    </h3>
+
+                    <p>
+                        24/7 Support
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section class="destinations">
+
+        <div class="section-title">
+            POPULAR DESTINATIONS
+        </div>
+
+        <h2>
+            Explore Beautiful Places
+        </h2>
+
+
+        <div class="destination-container">
+
+
+            <div class="destination-card">
+
+                <div class="place-image">
+                    🏔️
+                </div>
+
+                <h3>
+                    Ooty
+                </h3>
+
+                <p>
+                    Enjoy the beautiful hills,
+                    gardens and pleasant climate
+                    in Ooty.
+                </p>
+
+                <a href="packages.html">
+                    View Package →
+                </a>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="place-image">
+                    🏖️
+                </div>
+
+                <h3>
+                    Goa
+                </h3>
+
+                <p>
+                    Relax on beautiful beaches
+                    and enjoy the vibrant life
+                    of Goa.
+                </p>
+
+                <a href="packages.html">
+                    View Package →
+                </a>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="place-image">
+                    🛕
+                </div>
+
+                <h3>
+                    Tirupati
+                </h3>
+
+                <p>
+                    Experience a peaceful spiritual
+                    journey to Tirupati.
+                </p>
+
+                <a href="packages.html">
+                    View Package →
+                </a>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="place-image">
+                    🌴
+                </div>
+
+                <h3>
+                    Kerala
+                </h3>
+
+                <p>
+                    Experience beautiful backwaters,
+                    nature and scenic views.
+                </p>
+
+                <a href="packages.html">
+                    View Package →
+                </a>
+
+            </div>
+
+
+            <div class="destination-card">
+
+                <div class="place-image">
+                    🕌
+                </div>
+
+                <h3>
+                    Hyderabad
+                </h3>
+
+                <p>
+                    Explore historic places and
+                    delicious food in Hyderabad.
+                </p>
+
+                <a href="packages.html">
+                    View Package →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <div class="section-title">
+            OUR SERVICES
+        </div>
+
+        <h2>
+            What We Offer
+        </h2>
+
+
+        <div class="service-container">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚌
+                </div>
+
+                <h3>
+                    Travel Services
+                </h3>
+
+                <p>
+                    Comfortable transportation
+                    facilities for a safe and
+                    happy journey.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🏨
+                </div>
+
+                <h3>
+                    Hotel Booking
+                </h3>
+
+                <p>
+                    Find comfortable hotels at
+                    affordable prices.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧳
+                </div>
+
+                <h3>
+                    Tour Packages
+                </h3>
+
+                <p>
+                    Domestic and customized
+                    packages for families and groups.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎧
+                </div>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    We are available to assist
+                    you throughout your journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="cta">
+
+        <h2>
+            Ready for Your Next Adventure?
+        </h2>
+
+        <p>
+            Book your dream tour with
+            Sumanth Travels & Tours today!
+        </p>
+
+        <a href="booking.html"
+           class="btn btn-secondary">
+
+            Book Now →
+
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div>
+
+                <h3>
+                    Sumanth Travels & Tours
+                </h3>
+
+                <p>
+                    Your Journey, Our Responsibility.
+                </p>
+
+                <p>
+                    Explore the world with comfort,
+                    joy and memorable journeys.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="packages.html">
+                            Packages
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Booking
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Our Services
+                </h3>
+
+                <ul>
+
+                    <li>Travel Services</li>
+                    <li>Hotel Booking</li>
+                    <li>Tour Packages</li>
+                    <li>Customer Support</li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact Info
+                </h3>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    📧 sumanthtravels@example.com
+                </p>
+
+                <p>
+                    📍 Andhra Pradesh, India
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Sumanth Travels & Tours.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
